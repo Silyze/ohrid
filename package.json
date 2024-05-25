@@ -1,0 +1,39 @@
+{
+  "name": "@startier/ohrid",
+  "version": "1.1.0",
+  "description": "A library for managing distributed nodes",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "keywords": [
+    "rpc",
+    "queue",
+    "server",
+    "client"
+  ],
+  "bin": {
+    "ohrid": "bin/cli-entrypoint"
+  },
+  "author": "Mihail Mojsoski",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@startier/ohrid-jsonrpc-driver": "^1.0.0",
+    "@types/node": "^20.9.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepare": "npm run build",
+    "version": "git add -A lib",
+    "postversion": "git push && git push --tags"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@mojsoski/logger": "^1.0.0",
+    "@mojsoski/streams": "^1.0.1",
+    "@mojsoski/streams-io": "^1.0.1"
+  }
+}
